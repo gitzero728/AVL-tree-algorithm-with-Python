@@ -1,0 +1,18 @@
+This job consists of 2 parts
+Prat#1- AVL -Tree
+- Classes AVLNode and AVLTree are already written and fixed, the class attributes and details can be shared upon awarding the project
+- Classes ExtendedAVLNode and ExtendedAVLTree are declared and require implementation in this project with the correct subtree_key_count after an insertion or removal operation, determining which methods in AVLTree and AVLNode must be overridden in ExtendedAVLTree and ExtendedAVLNode to keep each node's subtree_key_count correct. New methods can be added if desired. Also, an algorithm that uses the subtree key counts to be developed so that get_nth_key() operates in worst case O(log n) time.
+
+
+Part#2 - Implementing Tree234Iterator
+The Tree234Iterator class is declared and require methods to be implemented with the following requirements:
+1- Iteration never changes the tree in any way
+2- Iteration starts at the tree's minimum key and ends at the maximum
+3- __init__() executes in worst-case O(log N) time
+4- __next__() executes in worst-case O(log N) time
+Space complexity is worst-case O(log N)
+
+
+Deadline 2 March 2024
+More details can be shared upon awarding the project
+

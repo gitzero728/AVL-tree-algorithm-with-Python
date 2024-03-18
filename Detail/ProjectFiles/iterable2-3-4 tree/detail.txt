@@ -1,0 +1,33 @@
+Step 1: Inspect the Node234.py file
+
+Inspect the Node234.py file. Access Node234.py by clicking on the orange arrow next to main.py at the top of the coding window.
+Node234.py is read only and has a complete implementation of a Node234 class for a 2-3-4 tree node. Getter and setter methods exist for each of Node234's attributes.
+
+
+Step 2: Inspect the Tree234Iterator.py file
+
+Inspect the Tree234Iterator.py file. The Tree234Iterator class is declared, but required methods are not implemented. The implementation must satisfy the following requirements:
+
+• Iteration never changes the tree in any way
+• Iteration starts at the tree's minimum key and ends at the maximum
+• __init__() executes in worst-case O(log N) time
+• __next__() executes in worst-case O(log N) time
+• Space complexity is worst-case O(log N)
+
+For simplicity, assume the tree is not changed by an outside source during the iterator's lifetime.
+
+
+Step 3: Understand requirement implications
+
+To satisfy the requirements, the iterator must maintain a collection of node references. A node exists in the collection only if that node must be revisited at some point in time.
+The iterator must visit only the necessary nodes to deliver a key when the __next__() is called. "Visiting" a node means calling any of that node's methods. Ex: Suppose an iterator is built for the tree below. Then the iterator's __next__() method is called to return key 5, then again to return key 10, then again to return key 15. The iterator should have only visited the highlighted nodes.
+Node visited by iterator that has iterated through keys 5, 10, and 15
+Node not visited by iterator that has iterated through keys 5, 10, and 15
+
+
+Step 4: Implement the Tree234Iterator class
+Implement the Tree234Iterator to satisfy the complexity requirements mentioned above. Code in main.py adds random keys to a Tree234 object, then tests that the iterator properly iterates through all keys in ascending order. But time and space complexity aren't tested by code in main.py. Rather, main.py only ensures that the iterator properly iterates through all keys.
+Most unit tests will fail if the iterator does not properly iterate through all the tree's keys in the correct order. So run code in develop mode and ensure that the test passes before submitting code.
+
+Hint
+The conceptual description of an iterator mentions that the iterator "references" a key. In the actual implementation, the "reference" to a key is not an int type. The iterator must know if more keys exist in the node, and a direct reference to the key integer itself does not include such information.
